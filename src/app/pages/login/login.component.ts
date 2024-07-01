@@ -19,8 +19,11 @@ export class LoginComponent {
     router = inject(Router)
 
     onLogin(){
+      debugger
       if(this.loginObj.userName == "venkat" && this.loginObj.password == "nandu"){
         alert("User Login Successfully");
+        debugger
+        localStorage.setItem("login",this.loginObj.userName);
         this.router.navigateByUrl("/dashboard")
       }else{
         alert("InValid UserId and Password");
